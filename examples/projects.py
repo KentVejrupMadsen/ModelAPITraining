@@ -9,5 +9,8 @@ R = requests.get(
     headers=HEADERS
 )
 
-print(R.json()['results'][1])
+print(R.json()['results'][1]['id'])
+print(R.json()['results'][1]['title'])
+print(R.json()['results'][1]['parsed_label_config']['label']['labels'])
+
 
