@@ -12,8 +12,8 @@ class PredictionInterface(
 ):
     def __init__(
         self,
-        credentials: CredentialsManager | None = None
+        credentials: CredentialsManager | None
     ):
-        super(
-            credentials
+        super().__init__(
+            credentials=credentials
         )

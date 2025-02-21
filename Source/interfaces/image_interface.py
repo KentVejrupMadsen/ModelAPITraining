@@ -15,7 +15,7 @@ class ImageInterface(
         self,
         credentials: CredentialsManager | None = None
     ):
-        super(
-            credentials
+        super().__init__(
+            credentials=credentials
         )
     

@@ -17,14 +17,25 @@ from interfaces.prediction_interface \
 class InterfaceManager:
     def __init__(
         self,
-        credentials: CredentialsManager | None = None
+        credentials: CredentialsManager | None 
     ):
         self.credentials: CredentialsManager | None = credentials
 
-        self.imageInterface: ImageInterface | None              = ImageInterface()
-        self.projectInterface: ProjectInterface | None          = ProjectInterface()
-        self.taskInterface: TaskInterface | None                = TaskInterface()
-        self.predictionInterface: PredictionInterface | None    = PredictionInterface()
+        self.imageInterface: ImageInterface | None              = ImageInterface(
+            self.getCredentialsManager()
+        )
+        
+        self.projectInterface: ProjectInterface | None          = ProjectInterface(
+            self.getCredentialsManager()
+        )
+
+        self.taskInterface: TaskInterface | None                = TaskInterface(
+            self.getCredentialsManager()
+        )
+
+        self.predictionInterface: PredictionInterface | None    = PredictionInterface(
+            self.getCredentialsManager()
+        )
 
         self.streamline()
 
