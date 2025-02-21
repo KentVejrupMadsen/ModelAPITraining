@@ -1,3 +1,6 @@
+from interfaces.credentials_manager \
+    import CredentialsManager
+
 from interfaces.interface_manager \
     import InterfaceManager
 
@@ -5,7 +8,9 @@ from interfaces.interface_manager \
 class DomainController:
     def __init__(
         self, 
-        manager: InterfaceManager
+        manager: InterfaceManager = InterfaceManager(
+            credentials=CredentialsManager()
+        )
     ):
         self.manager = manager
     
