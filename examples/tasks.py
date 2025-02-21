@@ -33,5 +33,7 @@ while True:
     
     if int((size_of_tasks % 1000)) == 0:
         print(size_of_tasks)
+        break
 
 print(size_of_tasks)
+print(all_tasks[0])
