@@ -1,4 +1,4 @@
-from Source.interfaces.interface \
+from interfaces.interface \
     import Interface
 
 

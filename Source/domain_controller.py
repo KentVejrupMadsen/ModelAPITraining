@@ -1,4 +1,4 @@
-from Source.interfaces.interface_manager \
+from interfaces.interface_manager \
     import InterfaceManager
 
 

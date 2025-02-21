@@ -1,4 +1,4 @@
-from Source.interfaces.credentials_manager \
+from interfaces.credentials_manager \
     import CredentialsManager
 
 
