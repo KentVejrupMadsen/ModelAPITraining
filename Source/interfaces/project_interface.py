@@ -1,4 +1,4 @@
-import requests
+from requests import get
 
 from interfaces.credentials_manager \
     import CredentialsManager
@@ -18,3 +18,27 @@ class ProjectInterface(
             credentials = credentials
         )
     
+    def getHeader(self):
+        return {
+            'Authorization': 'Token ' + self.getCredentialsManager().getToken()
+        }
+
+    def listProjects(self):
+        response = get(
+            url=str(
+                self.getCredentialsManager().getProtocol() + 
+                '://' + 
+                self.getCredentialsManager().getURI() + 
+                ':' +
+                self.getCredentialsManager().getPortAsText() + 
+                '/api/projects'
+            ),
+            headers=self.getHeader()
+        )
+
+        results = response.json()
+
+        return {
+            'number_of_projects': results['count'],
+            'projects': results['results']
+        }

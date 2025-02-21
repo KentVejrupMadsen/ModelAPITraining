@@ -15,5 +15,5 @@ class PredictionInterface(
         credentials: CredentialsManager | None
     ):
         super().__init__(
-            credentials=credentials
+            credentials = credentials
         )

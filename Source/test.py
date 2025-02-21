@@ -7,3 +7,7 @@ from interfaces.credentials_manager \
 manager = InterfaceManager(
     CredentialsManager()
 )
+
+project = manager.projectInterface
+
+print(project.listProjects())
