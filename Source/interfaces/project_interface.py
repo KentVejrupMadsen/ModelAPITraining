@@ -12,5 +12,7 @@ class ProjectInterface(
         self,
         credentials: CredentialsManager | None = None
     ):
-        super(credentials)
+        super(
+            credentials
+        )
     

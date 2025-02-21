@@ -12,4 +12,6 @@ class PredictionInterface(
         self,
         credentials: CredentialsManager | None = None
     ):
-        super(credentials)
+        super(
+            credentials
+        )

@@ -4,6 +4,7 @@ from interfaces.credentials_manager \
 from interfaces.interface \
     import Interface
 
+
 class TaskInterface(
     Interface
 ):
@@ -11,5 +12,7 @@ class TaskInterface(
         self,
         credentials: CredentialsManager | None = None
     ):
-        super(credentials)
+        super(
+            credentials
+        )
     

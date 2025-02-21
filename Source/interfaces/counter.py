@@ -4,7 +4,7 @@ class Counter:
     def __init__(
         self,
         start_value: int = 0,
-        step: int = 1
+        step: int        = 1
     ):
         self.value = start_value
         self.step = step
