@@ -1,3 +1,5 @@
+from ultralytics import Model
+
 def main():
     pass
 
