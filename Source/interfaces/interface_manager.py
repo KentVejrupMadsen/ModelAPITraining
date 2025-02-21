@@ -19,23 +19,12 @@ class InterfaceManager:
         self,
         credentials: CredentialsManager | None 
     ):
+        self.imageInterface: ImageInterface | None           = ImageInterface(None)
+        self.projectInterface: ProjectInterface | None       = ProjectInterface(None)
+        self.taskInterface: TaskInterface | None             = TaskInterface(None)
+        self.predictionInterface: PredictionInterface | None = PredictionInterface(None)
+
         self.credentials: CredentialsManager | None = credentials
-
-        self.imageInterface: ImageInterface | None              = ImageInterface(
-            self.getCredentialsManager()
-        )
-        
-        self.projectInterface: ProjectInterface | None          = ProjectInterface(
-            self.getCredentialsManager()
-        )
-
-        self.taskInterface: TaskInterface | None                = TaskInterface(
-            self.getCredentialsManager()
-        )
-
-        self.predictionInterface: PredictionInterface | None    = PredictionInterface(
-            self.getCredentialsManager()
-        )
 
         self.streamline()
 
@@ -54,5 +43,20 @@ class InterfaceManager:
     def streamline(
         self
     ):
-        pass
+        self.imageInterface.setCredentialsManager(
+            self.getCredentialsManager()
+        )
+
+        self.projectInterface.setCredentialsManager(
+            self.getCredentialsManager()
+        )
+
+        self.taskInterface.setCredentialsManager(
+            self.getCredentialsManager()
+        )
+
+        self.predictionInterface.setCredentialsManager(
+            self.getCredentialsManager()
+        )
+        
 

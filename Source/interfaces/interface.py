@@ -19,4 +19,4 @@ class Interface:
         self, 
         parameter: CredentialsManager
     ) -> None:
-        set.credentials = parameter
+        self.credentials = parameter

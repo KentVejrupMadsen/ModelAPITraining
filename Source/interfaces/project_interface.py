@@ -15,6 +15,6 @@ class ProjectInterface(
         credentials: CredentialsManager | None
     ):
         super().__init__(
-            credentials=credentials
+            credentials = credentials
         )
     
