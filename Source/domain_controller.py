@@ -1,23 +1,23 @@
-from Source.interfaces.interface \
-    import Interface
+from Source.interfaces.interface_manager \
+    import InterfaceManager
 
 
 class DomainController:
     def __init__(
         self, 
-        interface: Interface
+        manager: InterfaceManager
     ):
-        self.interface = interface
+        self.manager = manager
     
-    def getInterface(
+    def getManager(
         self
-    ) -> Interface | None:
-        return self.interface
+    ) -> InterfaceManager | None:
+        return self.manager
     
-    def setInterface(
+    def setManager(
         self, 
-        parameter: Interface
+        parameter: InterfaceManager
     ) -> None:
-        self.interface = parameter
+        self.manager = parameter
 
     
