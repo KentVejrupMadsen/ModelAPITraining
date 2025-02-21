@@ -1,3 +1,5 @@
+import requests
+
 from interfaces.credentials_manager \
     import CredentialsManager
 

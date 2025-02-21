@@ -1,8 +1,11 @@
+import requests
+
 from interfaces.interface \
     import Interface
 
 from interfaces.credentials_manager \
     import CredentialsManager
+
 
 
 class ImageInterface(
@@ -12,5 +15,7 @@ class ImageInterface(
         self,
         credentials: CredentialsManager | None = None
     ):
-        super(credentials)
+        super(
+            credentials
+        )
     
