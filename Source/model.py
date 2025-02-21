@@ -2,7 +2,7 @@ from ultralytics \
     import Model
 
 
-class Model:
+class SystemModel:
     def __init__(
         self, 
         location: str
@@ -20,6 +20,6 @@ class Model:
     
     def setModel(
         self, 
-        parameter:Model
+        parameter: Model
     ) -> None:
         self.model = parameter
