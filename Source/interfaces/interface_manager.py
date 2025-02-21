@@ -9,13 +9,19 @@ class InterfaceManager:
     ):
         self.credentials: CredentialsManager | None = credentials
     
-    def getCredentials(
+    def getCredentialsManager(
         self
     ) -> CredentialsManager:
         return self.credentials
     
-    def setCredentials(
+    def setCredentialsManager(
         self, 
         parameter: CredentialsManager
     ) -> None:
         set.credentials = parameter
+    
+    def streamline(
+        self
+    ):
+        pass
+

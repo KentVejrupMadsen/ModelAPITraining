@@ -8,3 +8,15 @@ class Interface:
         credentials: CredentialsManager | None = None
     ):
         self.credentials: CredentialsManager | None = credentials
+
+    
+    def getCredentialsManager(
+        self
+    ) -> CredentialsManager:
+        return self.credentials
+    
+    def setCredentialsManager(
+        self, 
+        parameter: CredentialsManager
+    ) -> None:
+        set.credentials = parameter

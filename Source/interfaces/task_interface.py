@@ -1,6 +1,15 @@
-class TaskInterface:
+from interfaces.credentials_manager \
+    import CredentialsManager
+
+from interfaces.interface \
+    import Interface
+
+class TaskInterface(
+    Interface
+):
     def __init__(
-        self
+        self,
+        credentials: CredentialsManager | None = None
     ):
-        pass
+        super(credentials)
     
