@@ -5,6 +5,11 @@ class APICredentials:
         self.uri = 'http://192.168.0.189:8080'
         self.token = '3b5c3ed6d6799a0909c3b1c5b2a58a929bd67af1'
     
+    def getURI(
+        self
+    ) -> str:
+        return self.uri
+
     def getToken(
         self
     ) -> str:
